@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!--
+ /**
+ * @category    KiT
+ * @package     KiT_Payme
+ * @author      Игамбердиев Бахтиёр Хабибулаевич
+ * @license      http://skill.uz/license-agreement.txt
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/Module/etc/module.xsd">
+    <module name="KiT_Payme" schema_version="0.0.1" setup_version="0.0.1">
+	</module>
+</config>

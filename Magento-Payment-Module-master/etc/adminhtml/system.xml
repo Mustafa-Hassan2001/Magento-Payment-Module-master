@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+    	<section id="payment">
+			<group id="payme" translate="label" type="text" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="1">
+		    	<label>Настройки кассы Payme</label>
+                
+				<comment><![CDATA[
+				<label style="background: url(/pub/static/version1516790298/frontend/Magento/luma/en_US/KiT_Payme/img/logoPayme.png) no-repeat 0 50% / 10rem;
+						padding-left: 15rem;
+					    padding-bottom: 10px;
+					    padding-top: 10px;
+					    width: 100%;
+					    text-align: left;" 
+					    class="label" for="payme">
+    			Настройки для кассы можно взять из кабинета <a href="https://paycom.uz/">поставщика</a> Раздел Параметры для разработчика .
+    			</label>
+    			]]></comment>
+                <field id="active" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Enable During Checkout</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                   	<config_path>payment/payme/active</config_path>
+                </field>
+
+                <field id="redirect" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="0">
+					<label>Перенаправление URL</label>
+				</field>
+                
+                <field id="checkout_url" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="0">
+					<label>Введите URL-адрес шлюза</label>
+				</field>
+
+               <field id="checkout_url_test" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="0">
+					<label>Введите URL-адрес шлюза для теста</label>
+				</field>
+							
+                <field id="merchant_id" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Id кассы</label>
+					<config_path>payment/payme/merchant_id</config_path>
+                </field>
+                <field id="merchant_key" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Пароль</label>
+					<config_path>payment/payme/merchant_key</config_path>
+                </field>
+                <field id="merchant_key_test" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Пароль для тестов</label>
+					<config_path>payment/payme/merchant_key_test</config_path>
+                </field>
+				<field id="status_test" translate="label" type="select" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Включить режим тестирования</label>
+                    <source_model>KiT\Payme\Model\Config\KiTPaymeYesno</source_model>
+                   	<config_path>payment/payme/status_test</config_path>
+					<comment>Настройки оплаты.</comment>
+                </field>
+
+				<field id="status_tovar" translate="label" type="select" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Добавить в чек данные о товарах</label>
+                    <source_model>KiT\Payme\Model\Config\KiTPaymeYesno</source_model>
+                   	<config_path>payment/payme/status_tovar</config_path>
+					<comment>Настройки оплаты.</comment>
+                </field>
+
+				<!--field id="callback" translate="label" type="select" sortOrder="6" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Вернуться после оплаты на:</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                   	<config_path>payment/payme/active</config_path>
+					<comment>Настройки оплаты.</comment>
+                </field-->
+				
+				<field id="callback_pay" translate="label" type="select" sortOrder="7" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Вернуться после оплаты через:</label>
+                    <source_model>KiT\Payme\Model\Config\AllKiTPaymeCallbackPay</source_model>
+                   	<config_path>payment/payme/callback_pay</config_path>
+					<comment>Настройки оплаты.</comment>
+                </field>				
+				
+				
+                <field id="endpoint_url" translate="label" type="text" sortOrder="8" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Endpoint Url</label>
+                    <comment>Данные URL необходимо внести в настроеки кассы в кабинете поставщика</comment>
+					<config_path>payment/payme/endpoint_url</config_path>
+                </field>
+				<field id="callback_checkout_url" translate="label" type="text" sortOrder="9" showInDefault="1" showInWebsite="1" showInStore="0" canRestore="0">
+					<label>Url для Payme</label>
+                    <comment>Данные URL необходим для размещения ссылки на Ваш магазин в прилжении Payme в разделе Оплаты</comment>
+					<config_path>payment/payme/callback_checkout_url</config_path>
+				</field>
+
+				<field id="view_batten" translate="label" type="text" sortOrder="10" showInDefault="9" showInWebsite="1" showInStore="1" canRestore="0">
+					<label>Текст на кнопке</label>
+                    <comment>Шаблон кнопки оплаты</comment>
+					<config_path>payment/payme/view_batten</config_path>
+				</field>
+				
+			</group>
+		</section>
+	</system>
+</config>

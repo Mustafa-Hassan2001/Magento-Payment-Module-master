@@ -1,0 +1,24 @@
+{
+    "name": "KiT/Payme",
+    "description": "N/A",
+    "require": {
+        "php": "~7.0.0|~7.0.1|~7.0.2|7.0.4|~7.0.6|~7.0.21",
+        "magento/module-checkout": "100.1.*",
+        "magento/module-payment": "100.1.*",
+        "magento/framework": "100.1.*"
+    },
+    "type": "magento2-module",
+    "version": "1.0.13",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "KiT\\Payme\\": ""
+        }
+    }
+}

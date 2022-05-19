@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!-- 
+ /**
+ * @category    KiT
+ * @package     KiT_Payme
+ * @author      Игамбердиев Бахтиёр Хабибулаевич
+ * @license      http://skill.uz/license-agreement.txt
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Store/etc/config.xsd">
+    <default>
+        <payment>
+            <payme>
+                <active>1</active>
+                <title>Payme Payment</title>
+                <model>KiT\Payme\Model\Payme</model>
+            </payme>
+        </payment>
+    </default>
+</config>
